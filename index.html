@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizador de Lugares</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-5">
+        <h1 class="text-3xl font-bold text-center mb-4">Localizador de Lugares</h1>
+
+        <!-- Barra de busca -->
+        <div class="flex justify-center mb-4">
+            <input id="search" type="text" placeholder="Digite um local..."
+                class="px-4 py-2 w-1/2 border rounded-md shadow-md">
+            <button id="searchBtn" class="ml-2 px-4 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600">
+                Buscar
+            </button>
+        </div>
+
+        <!-- Container do mapa -->
+        <div id="map" class="w-full h-96 rounded-lg shadow-lg"></div>
+
+        <!-- Informações do local selecionado -->
+        <div id="info" class="mt-4 bg-white p-4 rounded-lg shadow-md hidden">
+            <h2 id="info-title" class="text-2xl font-semibold"></h2>
+            <p id="info-description" class="text-gray-600"></p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
